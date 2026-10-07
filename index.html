@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Shooter Ringkas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <!-- Papan Maklumat Atas (HUD) -->
+    <header class="hud">
+      <div>Skor: <span id="scoreDisplay">0</span> / 500</div>
+      <div>Nyawa: <span id="livesDisplay">❤️❤️❤️</span></div>
+    </header>
+
+    <!-- Kanvas Permainan -->
+    <canvas id="gameCanvas" width="480" height="640"></canvas>
+
+    <!-- Skrin Mula & Arahan -->
+    <div id="startScreen" class="overlay">
+      <div class="card">
+        <h1>SPACE SHOOTER</h1>
+        <p>Pertahankan stesen daripada meteor!</p>
+        <div class="instructions">
+          <p><strong>Kawalan:</strong></p>
+          <p>← / → atau A / D : Gerak Kiri / Kanan</p>
+          <p>Spacebar atau Klik Tetikus : Tembak</p>
+          <p><strong>Misi:</strong> Capai 500 mata untuk menang. Jangan biarkan 3 nyawa habis!</p>
+        </div>
+        <button id="startBtn" class="btn">Mula Permainan</button>
+      </div>
+    </div>
+
+    <!-- Skrin Tamat / Menang -->
+    <div id="gameOverScreen" class="overlay hidden">
+      <div class="card">
+        <h2 id="endTitle">Permainan Tamat</h2>
+        <p id="endMessage">Skor Akhir: 0</p>
+        <button id="restartBtn" class="btn">Main Semula</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
