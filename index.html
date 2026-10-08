@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Shooter Ringkas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <!-- Papan Maklumat Atas (HUD) -->
+    <header class="hud">
+      <div>Score: <span id="scoreDisplay">0</span></div>
+      <div>Lives: <span id="livesDisplay">❤️❤️❤️</span></div>
+    </header>
+
+    <!-- Kanvas Permainan -->
+    <canvas id="gameCanvas" width="480" height="640"></canvas>
+
+    <!-- Skrin Mula & Arahan -->
+    <div id="startScreen" class="overlay">
+      <div class="card">
+        <h1>SPACE SHOOTER</h1>
+        <p>Defend your spaceship!</p>
+        <div class="instructions">
+          <p><strong>Laptop Control / PC:</strong></p>
+          <p>• Move the Mouse: Steer the ship</p>
+          <p>• Left-click the Mouse / Spacebar : Shoot</p>
+          <hr style="margin: 8px 0; border: 0; border-top: 1px solid #374151;">
+          <p><strong>Phone Control:</strong></p>
+          <p>• Toggle Pad(Joystick) : Kawal Arah Kapal</p>
+          <p>• SHOOT 🔥 BUTTON : Fire a Bullet</p>
+          <hr style="margin: 8px 0; border: 0; border-top: 1px solid #374151;">
+          <p><strong>Mission:</strong> Hold out as long as possible! Speed increases every time you PASS 500 points. <strong>CAUTION:</strong> Do Not Shoot 💣 BOMB!</p>
+        </div>
+        <button id="startBtn" class="btn">Game Start</button>
+      </div>
+    </div>
+
+    <!-- Skrin Tamat / Game Over -->
+    <div id="gameOverScreen" class="overlay hidden">
+      <div class="card">
+        <h2 id="endTitle">Game Over</h2>
+        <p id="endMessage">Last Score: 0</p>
+        <button id="restartBtn" class="btn">Play Again</button>
+      </div>
+    </div>
+
+    <!-- Pad Kawalan Halimunan & Butang Shoot -->
+    <div id="controlZone" class="control-zone">
+      <div id="touchMoveArea" class="touch-move-area">
+        <span class="touch-hint">👆 Seret jari di sini untuk bergerak</span>
+      </div>
+      <button id="mobileShootBtn" class="mobile-shoot-btn">🔥 SHOOT</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
